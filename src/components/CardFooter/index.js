@@ -14,7 +14,7 @@ export default function CardFooter() {
         <div>
             <FontAwesomeIcon icon={faLocationDot} className="custom-pin"/>
             <div>
-              <p>Rua Jardins, 123 - Indianópolis</p>
+              <p>Rua Jandira, 123 - Indianópolis</p>
               <p>04080-002</p>
             </div>
         </div>

@@ -1,4 +1,6 @@
 import './index.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons' 
 
 
 export default function CardHeader() {
@@ -8,8 +10,11 @@ export default function CardHeader() {
         <img src="/assets/images/logo.png" className="logo" alt="logo-pagina" />
 
           <div>
-            <p>Rua Jardins, 123 - Indianópolis</p>
-            <p>04080-002</p>
+            <FontAwesomeIcon icon={faLocationDot} className="custom-pin"/>
+            <div>
+              <p>Rua Jardins, 123 - Indianópolis</p>
+              <p>04080-002</p>
+            </div>
           </div>
         </div>
         <nav>
