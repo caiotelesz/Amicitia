@@ -12,7 +12,7 @@ export default function Home() {
     <section className="section1">
       <CardHeader />
       <div className="home1">
-        <h1>Estamos Aqui Para Cuidar do Seu Pet</h1>
+        <h1>Estamos Aqui Para Cuidar do <b>Seu Pet</b></h1>
       </div>
 
       <div className="home2">
