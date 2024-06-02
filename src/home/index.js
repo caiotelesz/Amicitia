@@ -6,13 +6,16 @@ import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { faDog } from "@fortawesome/free-solid-svg-icons";
 
 import "./index.scss";
+import AgendarHorario from "../components/Agenda";
 
 export default function Home() {
   return (
     <section className="section1">
       <CardHeader />
       <div className="home1">
-        <h1>Estamos Aqui Para Cuidar do <b>Seu Pet</b></h1>
+        <h1>
+          Estamos Aqui Para Cuidar do <b>Seu Pet</b>
+        </h1>
       </div>
 
       <div className="home2">
@@ -23,7 +26,7 @@ export default function Home() {
           (Serviço de leva e traz)
         </p>
         <div>
-          <div>
+          <div className="container-home2">
             <FontAwesomeIcon icon={faEnvelopeOpen} className="icon-Home" />
             <h2>Nossa História</h2>
             <p>
@@ -34,7 +37,7 @@ export default function Home() {
               na cidade.
             </p>
           </div>
-          <div>
+          <div className="container-home2">
             <FontAwesomeIcon icon={faDog} className="icon-Home" />
             <h2>O que fazemos?</h2>
             <p>
@@ -52,6 +55,10 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="home3">
+        <AgendarHorario />
       </div>
 
       <CardFooter />
