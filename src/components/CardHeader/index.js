@@ -1,6 +1,8 @@
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons' 
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
+
 
 
 export default function CardHeader() {
@@ -22,7 +24,9 @@ export default function CardHeader() {
             <li><a href="#">RESULTADOS DE EXAMES</a></li>
             <li><a href="#">AGENDAR HORÁRIO</a></li>
             <li><a href="#">NOSSOS PROFISSIONAIS</a></li>
-            <li><a href="#">CONTATO</a></li>
+            <li>
+              <Link to='/contato'>CONTATO</Link>
+            </li>
             <li><a href="#">TRABALHE CONOSCO</a></li>
           </ul>
         </nav>

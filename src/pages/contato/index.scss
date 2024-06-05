@@ -1,0 +1,70 @@
+.section-contato {
+  .container-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 90px;
+    gap: 13px;
+    width: auto;
+    
+    h1, h2, p {
+      color: #065F04;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    input, .msg-contato {
+      border: none;
+
+      width: 100%;
+      max-width: 800px;
+      padding: 10px 15px;
+
+      font-family: sans-serif;
+
+      &::placeholder {
+        color: #065F04; // Cor do placeholder
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input { border-radius: 40px; }
+
+    .msg-contato {
+      border-radius: 25px;
+      height: 100px;
+      resize: none; // nn deixar que o usuário mexa na caixa de mensagem
+    }
+    
+    button {
+      background-color: #065F04;
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      font-style: italic;
+      
+      border: none;
+      border-radius: 20px;
+
+      padding: 10px 70px;
+      margin-top: 20px;
+    }
+  }
+}

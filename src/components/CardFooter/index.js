@@ -1,6 +1,7 @@
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'  
+import { Link } from 'react-router-dom';
 
 export default function CardFooter() {
   
@@ -21,14 +22,14 @@ export default function CardFooter() {
 
         <nav>
           <a href='#'>Resultados de exames</a>
-          <a href='#'>Entre em contato</a>
+          <Link to='/contato'>Entre em contato</Link>
           <a href='#'>Trabalhe conosco</a>
         </nav>
       </div>
 
 
       <footer>
-        <a href='#'> Copyright &copy; 2024 Amicitia Vet - Direitos Reservados </a>
+        <p> Copyright &copy; 2024 Amicitia Vet - Direitos Reservados </p>
         <a href='#'> Confira a nossa política de privacidade </a>
       </footer>
     </div>

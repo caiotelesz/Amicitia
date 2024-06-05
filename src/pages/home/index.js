@@ -1,12 +1,12 @@
-import CardHeader from "../components/CardHeader";
-import CardFooter from "../components/CardFooter";
+import CardHeader from "../../components/CardHeader";
+import CardFooter from "../../components/CardFooter";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { faDog } from "@fortawesome/free-solid-svg-icons";
 
 import "./index.scss";
-import AgendarHorario from "../components/Agenda";
+import AgendarHorario from "../../components/Agenda";
 
 export default function Home() {
   return (
