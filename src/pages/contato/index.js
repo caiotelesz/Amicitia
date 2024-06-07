@@ -1,5 +1,5 @@
-import CardFooter from "../../components/CardFooter";
 import CardHeader from "../../components/CardHeader";
+import CardFooter from "../../components/CardFooter";
 import "./index.scss";
 
 export default function Contato() {

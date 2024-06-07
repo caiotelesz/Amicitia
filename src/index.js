@@ -4,6 +4,7 @@ import "./index.scss";
 import App from "./pages/home";
 import Contato from "./pages/contato";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Exames from "./pages/exames";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,6 +13,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/contato" element={<Contato />} />
+        <Route path="/exames" element={<Exames />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
