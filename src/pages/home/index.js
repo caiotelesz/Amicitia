@@ -1,6 +1,8 @@
 import CardHeader from "../../components/CardHeader";
 import CardFooter from "../../components/CardFooter";
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +12,17 @@ import "./index.scss";
 import AgendarHorario from "../../components/Agenda";
 
 export default function Home() {
-  
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   
   return (
     <section className="section1">
@@ -60,7 +72,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="home3">
+      <div className="home3" id="agendar-horario">
         <AgendarHorario />
       </div>
 

@@ -25,7 +25,7 @@ export default function CardHeader() {
       <nav>
         <ul>
           <li>
-            <Link to>AGENDAR HORÁRIO</Link>
+            <Link to="/#agendar-horario">AGENDAR HORÁRIO</Link>
           </li>
           <li>
             <Link to="/exames">RESULTADOS DE EXAMES</Link>
