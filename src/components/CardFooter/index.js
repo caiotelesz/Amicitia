@@ -21,9 +21,9 @@ export default function CardFooter() {
         </div>
 
         <nav>
-          <a href='#'>Resultados de exames</a>
+          <Link to="/exames">Resultados de exames</Link>
           <Link to='/contato'>Entre em contato</Link>
-          <a href='#'>Trabalhe conosco</a>
+          <Link to="/trabalhe_conosco">Trabalhe conosco</Link>
         </nav>
       </div>
 
