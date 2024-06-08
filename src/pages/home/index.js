@@ -10,6 +10,7 @@ import { faDog } from "@fortawesome/free-solid-svg-icons";
 
 import "./index.scss";
 import AgendarHorario from "../../components/Agenda";
+import PreviewBlog from "../../components/PreviewBlog";
 
 export default function Home() {
   const location = useLocation();
@@ -76,6 +77,13 @@ export default function Home() {
         <AgendarHorario />
       </div>
 
+      <div className="home4">
+        <h1>Últimos blogs</h1>
+        <div>
+          <PreviewBlog />
+          <PreviewBlog />
+        </div>
+      </div>
       <CardFooter />
     </section>
   );

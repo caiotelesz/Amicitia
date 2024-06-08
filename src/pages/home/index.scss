@@ -90,4 +90,24 @@ body {
   .home3{
     width: 100%;
   }
+
+  .home4 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 70px 0px;
+
+    h1 {
+      text-align: center;
+      color: #065f04;
+      font: 500;
+      font-size: 55px;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      margin: 0px 55px;
+    }
+  }
 }
