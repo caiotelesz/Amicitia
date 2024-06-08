@@ -37,7 +37,7 @@ export default function CardHeader() {
             <Link to="/contato">CONTATO</Link>
           </li>
           <li>
-            <a href="#">TRABALHE CONOSCO</a>
+            <Link to="/trabalhe_conosco">TRABALHE CONOSCO</Link>
           </li>
         </ul>
       </nav>
