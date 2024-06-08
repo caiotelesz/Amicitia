@@ -6,6 +6,7 @@ import Contato from "./pages/contato";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Exames from "./pages/exames";
 import TrabalheConosco from "./pages/trabalhe-conosco";
+import NossosProfissionais from "./pages/nossos-profissionais";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
         <Route path="/contato" element={<Contato />} />
         <Route path="/exames" element={<Exames />} />
         <Route path="/trabalhe_conosco" element={<TrabalheConosco />} />
+        <Route path="/nossos_profissionais" element={<NossosProfissionais />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

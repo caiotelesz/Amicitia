@@ -32,7 +32,7 @@ export default function CardHeader() {
             <Link to="/exames">RESULTADOS DE EXAMES</Link>
           </li>
           <li>
-            <a href="#">NOSSOS PROFISSIONAIS</a>
+            <Link to="/nossos_profissionais">NOSSOS PROFISSIONAIS</Link>
           </li>
           <li>
             <Link to="/contato">CONTATO</Link>
