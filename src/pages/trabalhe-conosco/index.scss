@@ -28,6 +28,7 @@
       gap: 5px;
       width: 100%;
       max-width: 800px;
+      font-family: sans-serif;
       input {
 
         padding: 10px;
@@ -45,6 +46,7 @@
 
       input[type="date"] {
         color: #878787;
+        font-family: sans-serif;
 
         &::-webkit-datetime-edit,
         &::-webkit-datetime-edit-fields-wrapper,
@@ -53,6 +55,7 @@
         &::-webkit-datetime-edit-day-field,
         &::-webkit-datetime-edit-year-field {
           color: #878787;
+          font-family: sans-serif;
         }
       }
     }
