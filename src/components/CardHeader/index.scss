@@ -61,4 +61,22 @@
       }
     }
   }
+
+  .icons-header {
+    display: flex;
+    align-items: center;
+  
+    a {
+      color: #065F04;
+      transition: color 0.3s easy;
+  
+      &:hover {
+        color: #145a32;
+      }
+  
+      .custom-userIcon {
+        font-size: 18px;
+      }
+    }
+  }
 }

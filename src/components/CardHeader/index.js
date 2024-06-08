@@ -1,6 +1,7 @@
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { Link } from "react-router-dom";
 
 export default function CardHeader() {
@@ -39,6 +40,14 @@ export default function CardHeader() {
           <li>
             <Link to="/trabalhe_conosco">TRABALHE CONOSCO</Link>
           </li>
+
+          <div className='icons-header'>
+          <div>
+            <a href='/login'>
+            <FontAwesomeIcon icon={faUser} className="custom-userIcon"/>
+            </a>
+          </div>
+        </div>
         </ul>
       </nav>
     </div>
