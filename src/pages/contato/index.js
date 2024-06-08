@@ -39,7 +39,7 @@ export default function Contato() {
           <input
             name="fullName"
             type="text"
-            placeholder="Nome completo"
+            placeholder="Nome completo *"
             value={formData.fullName}
             onChange={inputChange}
           />
@@ -47,7 +47,7 @@ export default function Contato() {
           <input
             name="email"
             type="email"
-            placeholder="E-mail"
+            placeholder="E-mail *"
             value={formData.email}
             onChange={inputChange}
           />
@@ -68,7 +68,9 @@ export default function Contato() {
             onChange={inputChange}
           />
 
-        <button onClick={submit}>ENVIAR</button>
+        <div>
+          <button onClick={submit}>ENVIAR</button>
+        </div>
       </div>
 
       <CardFooter />
