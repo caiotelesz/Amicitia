@@ -97,6 +97,10 @@ body {
     gap: 50px;
     padding: 70px 0px;
 
+    .link-blog {
+      text-decoration: none;
+    }
+
     h1 {
       text-align: center;
       color: #065f04;
@@ -104,10 +108,10 @@ body {
       font-size: 55px;
     }
 
-    div {
+    .blog-grid {
       display: flex;
       justify-content: center;
-      margin: 0px 55px;
+      gap: 110px;
     }
   }
 }

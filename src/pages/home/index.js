@@ -2,7 +2,7 @@ import CardHeader from "../../components/CardHeader";
 import CardFooter from "../../components/CardFooter";
 
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
@@ -78,8 +78,11 @@ export default function Home() {
       </div>
 
       <div className="home4">
-        <h1>Últimos blogs</h1>
-        <div>
+
+        <Link to="/blog" className="link-blog">
+          <h1>Últimos blogs</h1>
+        </Link>
+        <div className="blog-grid">
           <PreviewBlog />
           <PreviewBlog />
         </div>

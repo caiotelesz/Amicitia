@@ -1,0 +1,23 @@
+.section-ultimosBlogs {
+  .container-ultimosBlogs {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 70px 0px;
+
+    h1 {
+      text-align: center;
+      color: #065f04;
+      font: 500;
+      font-size: 55px;
+    }
+
+    .blog-grid {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      margin: 0px 200px;
+    }
+  }
+}
