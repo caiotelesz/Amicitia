@@ -13,6 +13,7 @@ import NossosProfissionais from "./pages/nossos-profissionais";
 import Privacidade from "./pages/privacidade";
 import Login from "./pages/login";
 import AdmPage from "./pages/adm-page";
+import CadastrarMedico from "./pages/cadastrar-medicos";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -30,6 +31,7 @@ root.render(
         <Route path="/privacidade" element={<Privacidade />} />
         <Route path="/login" element={<Login />} />
         <Route path="/adm" element={<AdmPage />} />
+        <Route path="/cadastrar_medicos" element={<CadastrarMedico />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
