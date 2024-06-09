@@ -4,34 +4,36 @@ export default function CardBlog() {
   return (
     <section className="section-cardBlog">
       <div className="container-cardBlog">
-      <img src="assets/images/golden.jpg" alt="imagem_do_blog" />
+      <div>
+        <img src="assets/images/golden.jpg" alt="imagem_do_blog" />
+      </div>
 
-      <span>
+      <div>
+      <p>
         Confira as informações sobre o que fazer em casos de emergências com o pet. Fique atento a qualquer alteração física ou comportamental e aos tipos de emergências que podem ocorrer.
-      </span>
+      </p>
 
-      <h1>
-        O Que Fazer Em Caso De Emergência Com O Pet?
-      </h1>
-
+        <h1>
+          O Que Fazer Em Caso De Emergência Com O Pet?
+        </h1>
       <p>
           É importante procurar um veterinário sempre que notar alguma alteração física ou comportamental no seu pet. No caso das emergências de cachorro ou gato, buscar atendimento imediato é essencial. Aqui estão alguns exemplos:
         </p>
         <ul>
-          <li>• atropelamento;</li>
-          <li>• envenenamento;</li>
-          <li>• convulsões;</li>
-          <li>• desmaios;</li>
-          <li>• queimaduras;</li>
-          <li>• picadas de cobras e aranhas;</li>
-          <li>• dificuldade respiratória;</li>
-          <li>• inchaços repentinos;</li>
-          <li>• diarreia hemorrágica aguda;</li>
-          <li>• choque alérgico;</li>
-          <li>• ausência de urina;</li>
-          <li>• mordidas durante brigas;</li>
-          <li>• cortes e perfurações;</li>
-          <li>• sangramentos.</li>
+          <li> atropelamento;</li>
+          <li> envenenamento;</li>
+          <li> convulsões;</li>
+          <li> desmaios;</li>
+          <li> queimaduras;</li>
+          <li> picadas de cobras e aranhas;</li>
+          <li> dificuldade respiratória;</li>
+          <li> inchaços repentinos;</li>
+          <li> diarreia hemorrágica aguda;</li>
+          <li> choque alérgico;</li>
+          <li> ausência de urina;</li>
+          <li> mordidas durante brigas;</li>
+          <li> cortes e perfurações;</li>
+          <li> sangramentos.</li>
         </ul>
 
         <p>
@@ -61,6 +63,13 @@ export default function CardBlog() {
         <p>
           As emergências são sempre inesperadas, por isso, é importante saber como agir. Se precisar de ajuda, conte conosco.
         </p>
+
+        <span>
+          Font:
+          <br />
+          VCA Hospitals
+        </span>
+      </div>
       </div>
     </section>
   );
