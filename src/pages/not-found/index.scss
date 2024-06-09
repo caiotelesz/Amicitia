@@ -1,0 +1,33 @@
+.section-notFound {
+  .card-notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #5B5B5B;
+    gap: 40px;
+    h1 { font-size: 320px; }
+    h2 { font-size: 50px; }
+    p { font-size: 30px; }
+  }
+}
+
+@media (max-width:551px) {
+  .section-notFound {
+    .card-notFound {
+      h1 { font-size: 190px;}
+      h2 { font-size: 32px; }
+      p { font-size: 20px; }
+    }
+  }
+}
+
+@media (max-width:323px) {
+  .section-notFound {
+    .card-notFound {
+      h1 { font-size: 80px;}
+      h2 { font-size: 22px; }
+      p { font-size: 15px; }
+    }
+  }
+}
