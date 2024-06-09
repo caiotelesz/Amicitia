@@ -10,6 +10,7 @@ import Blog from "./pages/blog";
 import Contato from "./pages/contato";
 import TrabalheConosco from "./pages/trabalhe-conosco";
 import NossosProfissionais from "./pages/nossos-profissionais";
+import Privacidade from "./pages/privacidade";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -24,6 +25,7 @@ root.render(
         <Route path="/contato" element={<Contato />} />
         <Route path="/trabalhe_conosco" element={<TrabalheConosco />} />
         <Route path="/nossos_profissionais" element={<NossosProfissionais />} />
+        <Route path="/privacidade" element={<Privacidade />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

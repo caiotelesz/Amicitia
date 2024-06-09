@@ -1,0 +1,30 @@
+.section-privacidade {
+  .container-privacidade {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 180px;
+
+
+    h1, h2 {
+      color: #065F04;
+      margin: 20px 0px;
+    }
+
+    h1 {
+      font-size: 35px;
+      font: 600;
+    }
+
+    h2 {
+      font-size: 27px;
+      font: 500;
+    }
+
+    p, li { color: #5B5B5B; }
+
+    ul {
+      margin-left: 25px;
+    }
+  }  
+}

@@ -22,7 +22,7 @@ export default function CardFooter() {
 
         <nav>
           <Link to="/exames">Resultados de exames</Link>
-          <Link to='/contato'>Entre em contato</Link>
+          <Link to="/contato">Entre em contato</Link>
           <Link to="/trabalhe_conosco">Trabalhe conosco</Link>
         </nav>
       </div>
@@ -30,7 +30,7 @@ export default function CardFooter() {
 
       <footer>
         <p> Copyright &copy; 2024 Amicitia Vet - Direitos Reservados </p>
-        <a href='#'> Confira a nossa política de privacidade </a>
+        <Link to="/privacidade"> Confira a nossa política de privacidade </Link>
       </footer>
     </div>
   );
