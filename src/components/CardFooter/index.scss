@@ -13,12 +13,12 @@
     
   .logo {
     height: 120px;
-    margin-right: 120px;
+    margin-right: 100px;
   }
   
     div {
       display: flex;
-      margin-right: 150px;
+      margin-right: 90px;
       
       .custom-pin {
         margin: 5px 10px 0px 0px;
@@ -39,12 +39,12 @@
 
     nav {
       display: flex;
-      gap: 90px;
+      gap: 70px;
 
       a, Link {
         text-decoration: none;
         color:#065F04;
-        font-size: 21px;
+        font-size: 19px;
         font-weight: 400;
       }
     } 
@@ -59,7 +59,7 @@
     a, p{
       text-decoration: none;
       color: #fff;
-      font-size: 19px;
+      font-size: 18px;
     }
   }
 }
