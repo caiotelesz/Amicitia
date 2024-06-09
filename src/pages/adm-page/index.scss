@@ -1,0 +1,16 @@
+.section-welcomeAdm{
+  .container-welcomeAdm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    h1 {
+      color: #065F04;
+      font-size: 45px;
+      font-weight: 500;
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+}
