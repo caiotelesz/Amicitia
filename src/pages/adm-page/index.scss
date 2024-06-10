@@ -1,22 +1,21 @@
 .section-welcomeAdm{
-  .container-welcomeAdm {
+  > .container-welcomeAdm {
     display: flex;
-    gap: 600px;
 
-    div {
+    div.main {
       display: flex;
-      text-align: center;
+      justify-content: center;
       align-items: center;
-
+      width: 100%;
+      height: 100vh;
       
       h1 {
         color: #065F04;
         font-size: 45px;
         font-weight: 500;
-        width: 100%;
         max-width: 500px;
+        text-align: center;
       }
-
     }
   }
 }
