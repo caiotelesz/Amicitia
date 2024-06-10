@@ -46,8 +46,10 @@ export default function SidebarItem() {
         </div>
 
         <div className="opt-nav">
-          <p>BLOGS</p>
-          <FontAwesomeIcon icon={faBook} className="icon-side" />
+          <Link to="/editar_blog" className='link'>
+            <p>BLOGS</p>
+            <FontAwesomeIcon icon={faBook} className="icon-side" />
+          </Link>
         </div>
 
         <div className="btn-exit">

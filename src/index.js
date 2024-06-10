@@ -16,6 +16,7 @@ import AdmPage from "./pages/adm-page";
 import CadastrarMedico from "./pages/cadastrar-medicos";
 import CadastrarBlog from "./pages/cadastrar-blog";
 import EditarMedicos from "./pages/editar-medico";
+import EditarBlog from "./pages/editar-blog";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -36,6 +37,7 @@ root.render(
         <Route path="/cadastrar_medicos" element={<CadastrarMedico />} />
         <Route path="/cadastrar_blog" element={<CadastrarBlog />} />
         <Route path="/editar_medicos" element={<EditarMedicos />} />
+        <Route path="/editar_blog" element={<EditarBlog />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
