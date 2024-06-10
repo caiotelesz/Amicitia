@@ -1,0 +1,19 @@
+.container-CardEditarMedico {
+  display: flex;
+  gap: 200px;
+  align-items: center;
+
+  background-color: #D9D9D9;
+  border-radius: 20px;
+  padding: 20px;
+
+  p, .icon-Edit { color: #065F04; }
+  p { font-size: 20px; }
+  .icon-Edit { font-size: 27px; }
+
+  div {
+    display: flex;
+    gap: 15px;
+
+  }
+}

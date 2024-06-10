@@ -39,8 +39,10 @@ export default function SidebarItem() {
         </div>
 
         <div className="opt-nav">
-          <p>MÉDICOS</p>
-          <FontAwesomeIcon icon={faUserDoctor} className="icon-side" />
+          <Link to="/editar_medicos" className='link'>
+            <p>MÉDICOS</p>
+            <FontAwesomeIcon icon={faUserDoctor} className="icon-side" />
+          </Link>
         </div>
 
         <div className="opt-nav">
