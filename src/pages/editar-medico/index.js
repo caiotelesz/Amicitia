@@ -14,7 +14,7 @@ export default function EditarMedicos() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchDoctors = async () => {
+    async function fetchDoctors() {
       try {
         const doctors = await medicoApi.buscarMedico();
         setListDoctor(doctors);
@@ -31,15 +31,6 @@ export default function EditarMedicos() {
 
   const addDoctor = () => {
     navigate('/cadastrar_medicos');
-  };
-
-  const deleteDoctor = async (id) => {
-    try {
-      await medicoApi.removerMedico(id);
-      setListDoctor(listDoctor.filter(doctor => doctor.id !== id));
-    } catch (error) {
-      console.error('Erro ao remover médico:', error);
-    }
   };
 
   if (loading) {
@@ -59,17 +50,9 @@ export default function EditarMedicos() {
           <h1>GERENCIAR MÉDICOS</h1>
 
           <div className="doctorList">
-            {listDoctor && listDoctor.length > 0 ? (
-              listDoctor.map(doctor => (
-                <CardEditarMedico 
-                  key={doctor.id} 
-                  doctor={doctor} 
-                  onDelete={() => deleteDoctor(doctor.id)}
-                />
-              ))
-            ) : (
-              <p>Nenhum médico encontrado.</p>
-            )}
+              {listDoctor.map(doctor => (
+                <CardEditarMedico key={doctor.id} doctor={doctor} />
+              ))}
           </div>
 
           <button className="button" onClick={addDoctor}>
