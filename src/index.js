@@ -33,6 +33,8 @@ root.render(
         <Route path="/nossos_profissionais" element={<NossosProfissionais />} />
         <Route path="/privacidade" element={<Privacidade />} />
         <Route path="/login" element={<Login />} />
+
+        {/* Administrador */}
         <Route path="/adm" element={<AdmPage />} />
         <Route path="/cadastrar_medicos" element={<CadastrarMedico />} />
         <Route path="/cadastrar_blog" element={<CadastrarBlog />} />
