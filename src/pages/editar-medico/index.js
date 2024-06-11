@@ -23,6 +23,7 @@ export default function EditarMedicos() {
           <CardEditarMedico />
           <CardEditarMedico />
           <CardEditarMedico />
+          <CardEditarMedico />
 
           <button className="button" onClick={addDoctor}>
             Adicionar médico
