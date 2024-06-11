@@ -23,12 +23,12 @@ export async function adicionarMedico(corp) {
 }
 
 // Editar médico
-export async function editarMedico(id, nome, crm, desc, img) {
+export async function editarMedico(id, nome, crm, descricao) {
   const url = API_ADDRESS + `/medico/${id ? id : ''}`;
   const corp = {
     nome,
     crm, 
-    desc
+    descricao
   }
 
   try {
@@ -37,18 +37,18 @@ export async function editarMedico(id, nome, crm, desc, img) {
       alert('Produto alterado com sucesso.');
     } else {
       const response = await axios(url, corp);
-      alert('Produto inserido com ID: ' + response.data.id);
+      alert('Medico inserido com ID: ' + response.data.id);
     }
   } catch(error) {
-    console.log('Erro ao salvar o produto: ' + error);
-    alert('Erro ao salvar o produto.');
+    console.log('Erro ao salvar o Medico: ' + error);
+    alert('Erro ao salvar o Medico.');
   }
 }
 
 // Deletar medico
 export async function removerMedico(id) {
   if(!id) {
-    alert('Selecione um produto para remover.');
+    alert('Selecione um medico para remover.');
     return;
   }
 

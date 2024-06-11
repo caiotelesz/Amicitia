@@ -17,7 +17,7 @@ import CadastrarMedico from "./pages/cadastrar-medicos";
 import CadastrarBlog from "./pages/cadastrar-blog";
 import EditarMedicos from "./pages/editar-medico";
 import EditarBlog from "./pages/editar-blog";
-import EditarMedico from "./pages/editar-medicos";
+import AlterarMedicos from "./pages/alterar-medicos";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -41,7 +41,7 @@ root.render(
         <Route path="/cadastrar_blog" element={<CadastrarBlog />} />
         <Route path="/editar_medicos" element={<EditarMedicos />} />
         <Route path="/editar_blog" element={<EditarBlog />} />
-        <Route path="/editar_medico/:doctorId" element={<EditarMedico />} />
+        <Route path="/editar_medico/:doctorId" element={<AlterarMedicos />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -9,15 +9,15 @@ import './index.scss';
 
 export default function EditarMedicos() {
   const [listDoctor, setListDoctor] = useState([]);
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchDoctors() {
       try {
-        const doctors = await medicoApi.buscarMedico();
-        setListDoctor(doctors);
+        const info = await medicoApi.buscarMedico();
+        setListDoctor(info);
       } catch (error) {
         console.error('Erro ao buscar médicos:', error);
         setError(error);
@@ -50,7 +50,7 @@ export default function EditarMedicos() {
           <h1>GERENCIAR MÉDICOS</h1>
 
           <div className="doctorList">
-              {listDoctor.map(doctor => (
+              {listDoctor.map((doctor) => (
                 <CardEditarMedico key={doctor.id} doctor={doctor} />
               ))}
           </div>

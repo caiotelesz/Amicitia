@@ -1,16 +1,21 @@
 import "./index.scss";
 
-export default function Veterinario() {
+
+import { API_ADDRESS } from "../../api/apiAddress";
+
+export default function Veterinario({ doctor }) {
+  const imgSrc = `${API_ADDRESS}/${doctor.img}`;
+
   return (
     <div className="card-veterinario">
-      <img src="assets/images/golden.jpg" alt="foto_medico" className="image"/>
+      <img src={imgSrc} alt="foto_medico" className="image"/>
 
       <div>
-        <h3>Dr. Marcelo</h3>
+        <h3>{doctor.nome ?? 'Nome do médico'}</h3>
         <div>
-          <span>CRMV-PR 9942</span>
+          <span>CRMV {doctor.crm ?? 'CRM'}</span>
           <p>
-            Médico veterinário formado pela UFPR, Aperfeiçoamento em oncologia - UNESP. Especialização em clínica e cirurgia de pequenos animais, especialização em oncologia veterinaria. Mestrado - UFFS. PDG em gestão na saúde veterinária - Fundação Dom Cabral. Membro da ABROVET - Associação brasileira de oncologia veterinária. Diretor Regional da ABHV - Associação brasileira de hospitais veterinários. Sócio fundador do grupo Vida Pets.
+            {doctor.descricao ?? "descrição do médico"}
           </p>
         </div>
       </div>

@@ -83,7 +83,6 @@ export default function CadastrarMedico() {
           <input
             type="file"
             accept="image/*"
-            // onChange={handleImageUpload}
             onChange={handleImageChange}
             style={{ display: 'none' }}
             id="upload-button"
