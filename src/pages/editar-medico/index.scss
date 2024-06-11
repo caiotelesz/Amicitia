@@ -19,6 +19,12 @@
         text-align: center;
       }
 
+      .doctorList {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
 
       .button {
         margin-top: auto;
