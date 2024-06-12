@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function CardHeader() {
   return (
-    <div className="App">
+    <div className="App-header">
       <div className="header-left">
         <Link to="/">
           <img

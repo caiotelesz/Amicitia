@@ -1,12 +1,9 @@
-
-
-.App {
+.App-header {
   padding: 20px;
   background-color: #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
 
   .logo {
     height: 80px;
@@ -43,7 +40,7 @@
     ul {
       display: flex;
       list-style: none;
-      gap: 30px;
+      gap: 40px;
 
       li {
         margin-left: 40px;
@@ -74,6 +71,66 @@
       .custom-userIcon {
         font-size: 18px;
       }
+    }
+  }
+}
+
+// Reponsividade
+@media (max-width: 1329px) {
+  .App-header {
+    padding: 15px;
+    gap: 80px;
+
+    .logo {
+      margin-right: 0px;
+    }
+
+    .header-left {
+      gap: 15px;
+      margin: 0px 25px;
+
+      div {
+        .custom-pin { font-size: 18px; }
+
+        div {
+          p { width: 130px;}
+        }
+
+      }
+    }
+
+    nav {
+      ul {
+        gap: 20px;
+          li {
+            margin-left: 10px;
+            font-size: 15px;
+            width: 105px;
+          }
+      }
+    }
+
+    .icons-header { 
+      margin-left: 70px;
+      .custom-userIcon { font-size: 13px; } 
+    }  
+  }
+}
+
+@media(max-width: 1158px) {
+  .App-header {
+    gap: 40px;
+
+    nav {
+      ul {
+        gap: 10px;
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+    .icons-header {
+      margin-left: 20px;
     }
   }
 }
