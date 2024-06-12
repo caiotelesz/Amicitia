@@ -9,12 +9,11 @@
     padding: 25px 100px;
     background-color: #D9D9D9;
     color: #065F04;
-
-    
-  .logo {
-    height: 120px;
-    margin-right: 100px;
-  }
+  
+    .logo {
+      height: 120px;
+      margin-right: 100px;
+    }
   
     div {
       display: flex;
@@ -60,6 +59,140 @@
       text-decoration: none;
       color: #fff;
       font-size: 18px;
+    }
+  }
+}
+
+// Responsividade
+@media (max-width: 1082px) {
+  .container-footer {
+    .box-footer {
+      padding: 25px 50px;
+
+      .logo {
+        height: 90px;
+        margin-right: 30px;
+      }
+
+      div {
+        margin-right: 30px;
+
+        .custom-pin { font-size: 17px; }
+
+        div {
+          p { 
+            font-size: 17px;
+            line-height: 1.0;
+            width: 150px;
+          }
+        }
+      }
+
+      nav {
+        gap: 30px;
+
+        a, Link {
+          font-size: 17px;
+        }
+      }
+    }
+
+    footer {
+      gap: 80px;
+      padding: 25px 120px;
+
+      a, p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 706px) {
+  .container-footer {
+    .box-footer {
+      padding: 15px 25px;
+
+      .logo {
+        height: 70px;
+        margin-right: 20px;
+      }
+
+      div {
+        margin-right: 20px;
+
+        .custom-pin { font-size: 13px; }
+
+        div {
+          p { 
+            font-size: 15px;
+            width: 120px;
+          }
+        }
+      }
+
+      nav {
+        gap: 5px;
+
+        a, Link {
+          font-size: 15px;
+          line-height: 1.0;
+          width: 90px;
+        }
+      }
+    }
+
+    footer {
+      gap: 30px;
+      padding: 20px 40px;
+
+      a, p {
+        font-size: 15px;
+        width: 260px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container-footer {
+    .box-footer {
+      padding: 10px 15px;
+
+      .logo {
+        height: 60px;
+        margin-right: 5px;
+      }
+
+      div {
+        margin-right: 10px;
+
+        .custom-pin { font-size: 10px; }
+
+        div {
+          p { 
+            font-size: 13px;
+          }
+        }
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 20px;
+        a, Link {
+          font-size: 13px;
+        }
+      }
+    }
+
+    footer {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 25px;
+
+      a, p {
+        font-size: 14px;
+      }
     }
   }
 }
