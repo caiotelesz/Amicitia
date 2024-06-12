@@ -62,3 +62,92 @@
     }
   }
 }
+
+// Responsividade
+@media (max-width: 925px) { 
+  .section-exames {
+    .container-exames {
+      margin: 30px 150px;
+
+      h1 { font-size: 30px; }
+
+      h2 {
+        font-size: 25px;
+        margin: 20px 0px 10px 0px;
+      }
+
+      h3 {
+        font-size: 21px;
+        margin: 20px 0px;
+      }
+
+      p, li { font-size: 15px; }
+
+      ol { padding: 0px 10px; }
+
+      
+
+      div {
+        gap: 5px;
+
+        h4 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+
+        button {
+          font-size: 17px;
+          padding: 10px 80px;
+        }
+
+        span { font-size: 17px; }
+      }
+    }
+  }
+}
+
+@media (max-width: 925px) { 
+  .section-exames {
+    .container-exames {
+      margin: 20px 50px;
+
+      h1 { font-size: 25px; }
+
+      h2 { 
+        font-size: 18px; 
+        margin: 15px 0px 5px 0px;
+      }
+
+      h3 {
+        font-size: 17px;
+        margin: 15px 0px;
+      }
+
+      p, li { font-size: 12px; }
+
+      ol { padding: 0px 5px; }
+
+      div {
+        h4 {
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+
+        button {
+          font-size: 15px;
+          padding: 5px 60px;
+        }
+
+        span { font-size: 13px; }
+      }
+    }
+  }
+}
+
+@media (max-width: 510px) { 
+  .section-exames {
+    .container-exames {
+      margin: 5px 10px;
+    }
+  }
+}
