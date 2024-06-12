@@ -66,3 +66,93 @@
     }
   }
 }
+
+// Responsividade
+@media (max-width: 837px) {
+  .home3 {
+    height: 45vh;
+
+    .content-home3 {
+      h1 {
+        font-size: 28px;
+        width: 400px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      > div {
+        gap: 5px;
+        button {
+          font-size: 13px;
+          width: 170px;
+          padding: 5px 15px;
+        }
+      }
+    }
+
+    .image-container {
+      width: 230px;
+      height: 224px;
+    }
+  }
+}
+
+@media (max-width: 667px) {
+  .home3 {
+    justify-content: space-evenly;
+    height: 40vh;
+
+    .content-home3 {
+      h1 {
+        font-size: 20px;
+        width: 270px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      > div {
+        button {
+          font-size: 11px;
+          width: 135px;
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    .image-container {
+      width: 180px;
+      height: 174px;
+    }
+  }
+}
+
+@media (max-width: 500px) { 
+  .home3 {
+    .content-home3 {
+      h1 {
+        font-size: 15px;
+        width: 220px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      > div {
+        flex-direction: column;
+        button {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .image-container {
+      width: 180px;
+      height: 174px;
+    }
+  }
+}

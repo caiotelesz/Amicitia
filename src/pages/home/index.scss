@@ -115,3 +115,131 @@ body {
     }
   }
 }
+
+// Responsividade
+@media (max-width: 837px) {
+  .section1 {
+    .home2 {
+      h1 { font-size: 30px;}
+      p { 
+        font-size: 17px; 
+        max-width: 700px;
+      }
+
+      div {
+        > div {
+          .icon-Home { font-size: 40px; }
+          h2 { font-size: 23px; }
+          p { 
+            font-size: 15px; 
+            width: 240px;
+          }
+        }
+      }
+    }
+
+    .home4 {
+      gap: 30px;
+
+      h1 { font-size: 40px; }
+      .blog-grid { gap: 60px; }
+    }
+  }
+}
+
+@media (max-width: 667px) {
+  .section1 {
+    .home1 {
+      height: 80%;
+      h1 {
+        font-size: 50px;
+        width: 500px;
+      }
+    }
+
+    .home2 {
+      padding: 30px 0px;
+      gap: 15px;
+      h1 { 
+        font-size: 23px;
+        margin-bottom: -10px;
+      }
+      p {
+        font-size: 14px;
+        width: 500px;
+      }
+
+      div {
+        gap: 23px;
+
+        > div {
+          .icon-Home { font-size: 25px; }
+          h2 { font-size: 18px; }
+          p {
+            font-size: 13px;
+            width: 220px;
+          }
+        }
+      }
+    }
+
+    .home4 {
+      gap: 25px;
+      padding: 40px 0px;
+
+      h1 { font-size: 25px; }
+      .blog-grid { gap: 40px; }
+    }
+  }
+}
+
+@media (max-width: 500px) { 
+  .section1 {
+    .home1 {
+      height: 60%;
+
+      h1 {
+        font-size: 30px;
+        width: 300px;
+      }
+    }
+
+    .home2 {
+      padding: 20px 0px;
+      gap: 10px;
+      h1 { 
+        font-size: 18px;
+        margin-bottom: -5px;
+      }
+      p {
+        font-size: 13px;
+        width: 290px;
+      }
+  
+      div {
+        flex-direction: column;
+        gap: 13px;
+  
+        > div {
+          .icon-Home { font-size: 17px; }
+          h2 { font-size: 15px; }
+          p {
+            font-size: 11px;
+            width: 190px;
+          }
+        }
+      }
+    }
+  
+    .home4 {
+      gap: 20px;
+      padding: 30px 0px;
+  
+      h1 { font-size: 20px; }
+      .blog-grid { 
+        flex-direction: column;
+        gap: 30px; 
+      }
+    }
+  }
+}

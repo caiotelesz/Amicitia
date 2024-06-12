@@ -31,3 +31,50 @@
     }
   }
 }
+
+// Responsividade
+@media (max-width: 837px) {
+  .section-previewBlog {
+    .card-previewBlog {
+      gap: 15px;
+
+      img {
+        width: 300px;
+        height: 150px;
+      }
+
+      h2 { 
+        font-size: 18px; 
+        width: 270px;
+      }
+
+      p {
+        font-size: 13px;
+        width: 220px;
+      }
+    }
+  }
+}
+
+@media (max-width: 667px) { 
+  .section-previewBlog {
+    .card-previewBlog {
+      gap: 5px;
+
+      img {
+        width: 200px;
+        height: 100px;
+      }
+
+      h2 { 
+        font-size: 15px; 
+        width: 230px;
+      }
+
+      p {
+        font-size: 11px;
+        width: 180px;
+      }
+    }
+  }
+}
