@@ -70,3 +70,88 @@
     }
   }
 }
+
+// Responsividade
+@media (max-width: 1225px) {
+  .section-contato {
+    .container-contato {
+      padding: 90px 0px;
+    }
+  }
+}
+
+@media (max-width: 1048px) {
+  .section-contato {
+    .container-contato {
+      gap: 10px;
+      h1 { 
+        font-size: 33px;
+        margin-bottom: 5px;
+      }
+      h2 {
+        font-size: 29px;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+  
+      input, .msg-contato {
+        width: 500px;
+        padding: 5px 10px;
+      }
+
+      .msg-contato {
+        height: 75px;
+      }
+
+
+      div {
+        button {
+          font-size: 14px;
+          margin-top: 10px;
+          padding: 10px 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 581px) {
+  .section-contato {
+    .container-contato {
+      gap: 8px;
+      h1 { 
+        font-size: 21px;
+        margin-bottom: 0px;
+      }
+      h2 {
+        font-size: 19px;
+        margin-bottom: 0px;
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 0px;
+      }
+  
+      input, .msg-contato {
+        width: 350px;
+        padding: 2px 5px;
+
+      }
+
+      .msg-contato {
+        height: 55px;
+      }
+
+      div {
+        button {
+          font-size: 12px;
+          margin-top: 5px;
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+}
