@@ -1,17 +1,21 @@
 import "./index.scss"
 
-export default function PreviewBlog() {
+import { API_ADDRESS } from "../../api/apiAddress";
+
+export default function PreviewBlog({ blog }) {
+  const imgSrc = `${API_ADDRESS}/${blog.foto}`;
+
   return (
     <section className="section-previewBlog">
       <div className="card-previewBlog">
-        <img src="assets/images/golden.jpg" alt="imagem_do_blog" />
+        <img src={imgSrc} alt="imagem do blog" />
 
         <h2>
-          O Que Fazer Em Caso De Emergência Com O Pet?
+          { blog.titulo ?? 'titulo do blog' }
         </h2>
 
         <p>
-        Confira as informações sobre o que fazer em casos de emergências com o pet. Fique atento a qualquer alteração física ou comportamental e aos tipos de emergências que podem ocorrer.
+          { blog.resumo ?? 'resumo do blog' }
         </p>
       </div>
     </section>

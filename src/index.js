@@ -29,8 +29,8 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/exames" element={<Exames />} />
-        <Route path="/blog" element={<UltimoBlogs />} />
-        <Route path="/blogg" element={<Blog />} />
+        <Route path="/ultimo_blog" element={<UltimoBlogs />} />
+        <Route path="/blog/:blogId" element={<Blog />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/trabalhe_conosco" element={<TrabalheConosco />} />
         <Route path="/nossos_profissionais" element={<NossosProfissionais />} />

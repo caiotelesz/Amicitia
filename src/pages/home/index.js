@@ -1,7 +1,7 @@
 import CardHeader from "../../components/CardHeader";
 import CardFooter from "../../components/CardFooter";
 
-import { useEffect } from "react";
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,9 +11,29 @@ import { faDog } from "@fortawesome/free-solid-svg-icons";
 import "./index.scss";
 import AgendarHorario from "../../components/Agenda";
 import PreviewBlog from "../../components/PreviewBlog";
+import * as blogApi from '../../api/blogApi';
 
 export default function Home() {
   const location = useLocation();
+  const [listBlog, setListBlog] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchBlogs() {
+      try {
+        const info = await blogApi.buscarBlog();
+        setListBlog(info);
+      } catch (error) {
+        console.error('Erro ao buscar blogs:', error);
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchBlogs();
+  }, []);
 
   useEffect(() => {
     const hash = location.hash;
@@ -79,12 +99,17 @@ export default function Home() {
 
       <div className="home4">
 
-        <Link to="/blog" className="link-blog">
+        <Link to="/ultimo_blog" className="link-blog">
           <h1>Últimos blogs</h1>
         </Link>
         <div className="blog-grid">
-          <PreviewBlog />
-          <PreviewBlog />
+        {listBlog.slice(0, 2).map((blog) => (
+            blog && blog.titulo && (
+              <Link className="link-blog" key={blog.id} to={`/blog/${blog.id}`}>
+                <PreviewBlog blog={blog} />
+              </Link>
+            )
+          ))}
         </div>
       </div>
       <CardFooter />
