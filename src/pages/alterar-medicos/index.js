@@ -53,7 +53,7 @@ export default function AlterarMedicos() {
     }
 
     const file = e.target.files[0]; 
-    const url = API_ADDRESS + `/roupa/imagem/${id}`;
+    const url = API_ADDRESS + `/medico/imagem/${id}`;
 
     const form = new FormData();
     form.append('imagem', file);
