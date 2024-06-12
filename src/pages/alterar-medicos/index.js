@@ -17,7 +17,6 @@ export default function AlterarMedicos() {
   const [descricao, setDescricao] = useState('');
   const [image, setImage] = useState(null);
   const [img, setImg] = useState('');
-  const [newImg, setNewImg] = useState(''); 
 
   const { doctorId } = useParams();
   const navigate = useNavigate();
@@ -31,9 +30,7 @@ export default function AlterarMedicos() {
         setNome(doctor.nome);
         setCrm(doctor.crm);
         setDescricao(doctor.descricao);
-        if(newImg) {
-          FormData.append("imagem", newImg);
-        }
+        setImage(doctor.image);
         setImg(`${API_ADDRESS}/${doctor.img}`)
       } catch (error) {
         console.error('Erro ao buscar o item:', error);
@@ -45,7 +42,13 @@ export default function AlterarMedicos() {
       fetchItem();
     }
   }, [doctorId]);
+  
+  async function alterarMedico() {
+    let info = await medicoApi.editarMedico(id, nome, crm, descricao);
 
+    return info;
+  }
+  
   async function alterarImagem(e) { 
     if (!id) {
       alert('Salve o produto antes de alterar a imagem.');
@@ -70,13 +73,6 @@ export default function AlterarMedicos() {
     }
   }
 
-  async function alterarMedico() {
-    let info = await medicoApi.editarMedico(id, nome, crm, descricao, newImg);
-
-    alert('medico alterado');
-
-    return info;
-  }
 
   return (
     <section className="section-cadastrarMedicos">
