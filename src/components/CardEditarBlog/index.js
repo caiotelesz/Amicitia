@@ -5,6 +5,7 @@ import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 import * as blogApi from "../../api/blogApi";
+import { API_ADDRESS } from "../../api/apiAddress";
 
 export default function CardEditarMedico({ blog }) {
   const navigate = useNavigate();
@@ -21,9 +22,11 @@ export default function CardEditarMedico({ blog }) {
     }
   }
 
+  const imgSrc = `${API_ADDRESS}/${blog.foto}`;
+
   return (
       <div className="container-CardEditarBlog">
-        <img src="assets/images/golden.jpg" alt="imagem_do_blog"/>
+        <img src={imgSrc} alt="imagem do blog"/>
 
         <h2>
           {blog.titulo ?? 'titulo do blog'}

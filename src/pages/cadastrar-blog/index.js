@@ -3,7 +3,6 @@ import CardFooter from "../../components/CardFooter";
 import CardHeader from "../../components/CardHeaderAdm";
 import "./index.scss";
 import { useNavigate } from 'react-router-dom';
-
 import * as blogApi from "../../api/blogApi";
 
 export default function CadastrarBlog() {
@@ -12,7 +11,7 @@ export default function CadastrarBlog() {
   const [resumo, setResumo] = useState("");
   const [descricao, setDescricao] = useState("");
   const [fonte, setFonte] = useState("");
-  const [foto, setFoto] = useState("");
+  const [foto, setFoto] = useState(null);
   const [image, setImage] = useState(null);
 
   const navigate = new useNavigate();
@@ -25,17 +24,17 @@ export default function CadastrarBlog() {
     formData.append('descricao', descricao);
     formData.append('fonte', fonte);
     if (foto) {
-      formData.append('foto', foto);
+      formData.append('imagem', foto);  // 'imagem' deve ser o nome esperado pelo backend
     }
 
     try {
-      if(id === "") {
+      if (id === "") {
         let info = await blogApi.adicionarBlog(formData);
         alert('Blog adicionado!');
       }
 
       navigate('/editar_blog');
-    } catch(error) {
+    } catch (error) {
       alert('erro em adicionar o blog');
       console.log(error.message);
     }
@@ -44,6 +43,7 @@ export default function CadastrarBlog() {
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
+      setFoto(file);  // Definindo o arquivo de imagem aqui
       const reader = new FileReader();
       reader.onloadend = () => {
         setImage(reader.result);
@@ -92,7 +92,6 @@ export default function CadastrarBlog() {
         </div>
         <div>
           <label>Foto do blog: </label>
-          
           <input
             type="file"
             accept="image/*"
