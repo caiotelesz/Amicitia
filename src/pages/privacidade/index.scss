@@ -28,3 +28,34 @@
     }
   }  
 }
+
+// Responsividade
+@media (max-width: 953px) {
+  .section-privacidade {
+    .container-privacidade {
+      padding: 25px 70px;
+
+      h1, h2 { margin: 10px 0px; }
+
+      h1 { font-size: 25px; }
+      h2 { font-size: 20px; }
+      p, li { font-size: 14px; }
+      ul { margin-left: 20px; }
+    }
+  }
+}
+
+@media (max-width: 602px) {
+  .section-privacidade {
+    .container-privacidade {
+      padding: 25px 10px;
+
+      h1, h2 { margin: 5px 0px; }
+
+      h1 { font-size: 20px; }
+      h2 { font-size: 18px; }
+      p, li { font-size: 12px; }
+      ul { margin-left: 15px; }
+    }
+  }
+}
