@@ -26,3 +26,43 @@
     }
   }
 }
+
+// Responsividade
+@media (max-width: 1171px) { 
+  .section-ultimosBlogs {
+    .container-ultimosBlogs {
+      .blog-grid { margin: 0px 30px; }
+    }
+  }
+}
+@media (max-width: 837px) { 
+  .section-ultimosBlogs {
+    .container-ultimosBlogs {
+      gap: 25px;
+      padding: 45px 0px;
+
+      h1 { font-size: 35px; }
+
+      .blog-grid {
+        gap: 30px;
+        margin: 0px 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 667px) {
+  .section-ultimosBlogs {
+    .container-ultimosBlogs {
+      gap: 15px;
+      padding: 25px 0px;
+
+      h1 { font-size: 27px; }
+
+      .blog-grid {
+        gap: 15px;
+        margin: 0px;
+      }
+    }
+  }
+ }
