@@ -18,6 +18,7 @@ import CadastrarBlog from "./pages/cadastrar-blog";
 import EditarMedicos from "./pages/editar-medico";
 import EditarBlog from "./pages/editar-blog";
 import AlterarMedicos from "./pages/alterar-medicos";
+import PrivateRoute from "./privateRoute";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -36,12 +37,12 @@ root.render(
         <Route path="/login" element={<Login />} />
 
         {/* Administrador */}
-        <Route path="/adm" element={<AdmPage />} />
-        <Route path="/cadastrar_medicos" element={<CadastrarMedico />} />
-        <Route path="/cadastrar_blog" element={<CadastrarBlog />} />
-        <Route path="/editar_medicos" element={<EditarMedicos />} />
-        <Route path="/editar_blog" element={<EditarBlog />} />
-        <Route path="/editar_medico/:doctorId" element={<AlterarMedicos />} />
+        <Route path="/adm" element={<PrivateRoute element={AdmPage} />} />
+        <Route path="/cadastrar_medicos" element={<PrivateRoute element={CadastrarMedico} />} />
+        <Route path="/cadastrar_blog" element={<PrivateRoute element={CadastrarBlog} />} />
+        <Route path="/editar_medicos" element={<PrivateRoute element={EditarMedicos} />} />
+        <Route path="/editar_blog" element={<PrivateRoute element={EditarBlog} />} />
+        <Route path="/editar_medico/:doctorId" element={<PrivateRoute element={AlterarMedicos} />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

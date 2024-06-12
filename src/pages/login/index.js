@@ -13,10 +13,20 @@ export default function Login() {
   const [senha, setSenha] = useState("");
   const navigate = useNavigate();
 
-  async function Login() {
-    let info = await loginApi.logarConta(email, senha, navigate);
+  // async function Login() {
+  //   let info = await loginApi.logarConta(email, senha, navigate);
 
-    return info;
+  //   return info;
+  // }
+
+  function dados(event) {
+    event.preventDefault();
+    if(email === 'admin' && senha === '1234') {
+      localStorage.setItem(true, Response.token);
+      navigate('/adm');
+    } else {
+      alert('Erro de login');
+    }
   }
 
   return(
@@ -49,7 +59,7 @@ export default function Login() {
             <FontAwesomeIcon icon={faLock} className="icon"/>
           </div>
 
-          <button type="submit" onClick={Login}>Login</button>
+          <button type="submit" onClick={dados}>Login</button>
         </form>
       </div>
     </section>
