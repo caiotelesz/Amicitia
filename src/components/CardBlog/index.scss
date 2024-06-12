@@ -4,14 +4,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 330px;
+    margin: 25px;
 
     div {
       display: flex;
       align-items: start;
       flex-direction: column;
-      width: 720px;
-      gap: 10px ;
+      width: 100%;
+      max-width: 720px;
+      gap: 10px;
 
       img {
         width: 719px;
@@ -49,3 +50,75 @@
       }
   }
 }
+
+// Responsividade
+@media (max-width: 731px) { 
+ .section-cardBlog {
+  .container-cardBlog {
+    margin: 15px;
+
+    div {
+      align-items: center;
+      img {
+        width: 500px;
+        height: 286px;
+      }
+    }
+
+    p:nth-of-type(1) {
+      margin-top: 10px;
+    }
+
+    p, li { 
+      margin: 0px 60px;
+      width: 550px;
+    }
+
+    span { 
+      margin-top: 5px;
+      font-size: 15px;
+    }
+
+    h1 { font-size: 22px; }
+  }
+ }
+}
+
+@media (max-width: 551px) { 
+  .section-cardBlog {
+   .container-cardBlog {
+     margin: 10px;
+ 
+     div {
+       align-items: center;
+       img {
+         width: 340px;
+         height: 186px;
+       }
+     }
+ 
+     p:nth-of-type(1) {
+       margin-top: 5px;
+     }
+ 
+     p, li { 
+      margin: 0px 10px;
+      font-size: 14px;
+      width: 100%;
+      max-width: 400px;
+     }
+ 
+     span { 
+       margin-top: 5px;
+       font-size: 15px;
+       width: 150px;
+     }
+ 
+     h1 { 
+      font-size: 18px;
+      width: 100%;
+      max-width: 300px;
+    }
+   }
+  }
+ }
