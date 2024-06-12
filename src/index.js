@@ -19,6 +19,7 @@ import EditarMedicos from "./pages/editar-medico";
 import EditarBlog from "./pages/editar-blog";
 import AlterarMedicos from "./pages/alterar-medicos";
 import PrivateRoute from "./privateRoute";
+import AlterarBlog from "./pages/alterar-blog";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -43,6 +44,7 @@ root.render(
         <Route path="/editar_medicos" element={<PrivateRoute element={EditarMedicos} />} />
         <Route path="/editar_blog" element={<PrivateRoute element={EditarBlog} />} />
         <Route path="/editar_medico/:doctorId" element={<PrivateRoute element={AlterarMedicos} />} />
+        <Route path="/editar_blog/:blogId" element={<PrivateRoute element={AlterarBlog} />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
