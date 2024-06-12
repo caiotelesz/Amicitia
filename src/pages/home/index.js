@@ -103,7 +103,7 @@ export default function Home() {
           <h1>Últimos blogs</h1>
         </Link>
         <div className="blog-grid">
-        {listBlog.slice(0, 2).map((blog) => (
+        {listBlog.slice(-2).map((blog) => (
             blog && blog.titulo && (
               <Link className="link-blog" key={blog.id} to={`/blog/${blog.id}`}>
                 <PreviewBlog blog={blog} />
