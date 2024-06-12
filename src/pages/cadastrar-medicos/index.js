@@ -34,7 +34,7 @@ export default function CadastrarMedico() {
 
       navigate('/editar_medicos');
     } catch (error) {
-      alert('erro em adicionar roupa');
+      alert('erro em adicionar medico');
       console.log(error.message);
     }
   }
