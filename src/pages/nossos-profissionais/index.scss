@@ -16,8 +16,23 @@
       margin-bottom: -50px;
     }
 
-    h2 {
-      font-size: 30px;
+    h2 { font-size: 30px; }
+  }
+}
+
+// Responsividade
+@media (max-width: 933px) {
+  .section-nossosProfissionais {
+    .card-nossosProfissionais {
+      gap: 25px;
+      padding: 25px 0px;
+
+      h1 {
+        font-size: 25px;
+        margin-bottom: -25px;
+      }
+
+      h2 { font-size: 20px; }
     }
   }
 }

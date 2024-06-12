@@ -41,6 +41,58 @@
         color: #878787;
       }
     }
-    
   }
 }
+
+// Responsividade
+@media (max-width: 1298px) {
+  .card-veterinario {
+    gap: 40px;
+
+    div {
+      width: 700px;
+
+      div {
+        span { font-size: 15px;}
+        p { font-size: 16px; }
+      }
+    }
+  }
+} 
+
+@media (max-width: 933px) {
+  .card-veterinario {
+    gap: 25px;
+
+    img {
+      width: 153px;
+      height: 126px;
+    }
+
+    div {
+      width: 550px;
+
+      h3 { font-size: 17px; }
+      div {
+        span { font-size: 14px;}
+        p { font-size: 14px; }
+      }
+    }
+  }
+} 
+
+@media (max-width: 727px) {
+  .card-veterinario {
+    gap: 10px;
+    flex-direction: column;
+    div {
+      width: 350px;
+
+      h3 { font-size: 15px; }
+      div {
+        span { font-size: 12px;}
+        p { font-size: 13px; }
+      }
+    }
+  }
+} 
