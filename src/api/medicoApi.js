@@ -34,7 +34,7 @@ export async function editarMedico(id, nome, crm, descricao) {
   try {
     if(id) {
       await axios.put(url, corp);
-      alert('Produto alterado com sucesso.');
+      alert('Medico alterado com sucesso.');
     } else {
       const response = await axios(url, corp);
       alert('Medico inserido com ID: ' + response.data.id);

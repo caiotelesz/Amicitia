@@ -2,23 +2,40 @@ import "./index.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
-export default function CardEditarMedico() {
+import * as blogApi from "../../api/blogApi";
+
+export default function CardEditarMedico({ blog }) {
+  const navigate = useNavigate();
+
+  const editClick = () => {
+    navigate(`/editar_blog/${blog.id}`);
+  };
+
+  async function removeBlog() {
+    try {
+      await blogApi.removerBlog(blog.id);
+    } catch (error) {
+      console.error('Erro ao remover o médico: ', error);
+    }
+  }
+
   return (
       <div className="container-CardEditarBlog">
         <img src="assets/images/golden.jpg" alt="imagem_do_blog"/>
 
         <h2>
-          O Que Fazer Em Caso De Emergência Com O Pet?
+          {blog.titulo ?? 'titulo do blog'}
         </h2>
 
         <p>
-        Confira as informações sobre o que fazer em casos de emergências com o pet. Fique atento a qualquer alteração física ou comportamental e aos tipos de emergências que podem ocorrer.
+         {blog.resumo ?? 'resumo do blog'}
         </p>
 
         <div>
-          <FontAwesomeIcon icon={faEdit} className="icon-Edit"/>
-          <FontAwesomeIcon icon={faTrash} className="icon-Edit"/>
+          <FontAwesomeIcon icon={faEdit} className="icon-Edit" onClick={editClick}/>
+          <FontAwesomeIcon icon={faTrash} className="icon-Edit" onClick={removeBlog}/>
         </div>
       </div>
   );

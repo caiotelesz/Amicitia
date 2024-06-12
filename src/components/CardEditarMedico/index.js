@@ -9,7 +9,7 @@ import * as medicoApi from "../../api/medicoApi";
 export default function CardEditarMedico({ doctor }) {
   const navigate = useNavigate();
 
-  const handleEditClick = () => {
+  const editClick = () => {
     navigate(`/editar_medico/${doctor.id}`);
   };
 
@@ -27,7 +27,7 @@ export default function CardEditarMedico({ doctor }) {
       <p>CRM {doctor.crm ?? 'CRM'}</p>
 
       <div>
-        <FontAwesomeIcon icon={faEdit} className="icon-Edit" onClick={handleEditClick} />
+        <FontAwesomeIcon icon={faEdit} className="icon-Edit" onClick={editClick} />
         <FontAwesomeIcon icon={faTrash} className="icon-Edit" onClick={removeDoctor}/>
       </div>
     </div>
