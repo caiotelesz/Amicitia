@@ -47,6 +47,7 @@ export default function Home() {
   
   return (
     <section className="section1">
+      <CardHeader />
       <div className="home1">
         <h1>
           Estamos Aqui Para Cuidar do <b>Seu Pet</b>
@@ -111,6 +112,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <CardFooter />
     </section>
   );
 }
