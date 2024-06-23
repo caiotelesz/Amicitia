@@ -40,6 +40,12 @@ export default function Exames() {
         <div>
           <h4>NOSSAS UNIDADES</h4>
           <button>Unidade Jandira</button>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1827.9682138977614!2d-46.66705184237904!3d-23.606612780353053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b54ec097e39%3A0x43ef4a40762d845a!2sVet%20Kat%20-%20Medicina%20Felina%20-%20Dra.%20Katiana%20Tavernari%20Bignardi%20-%20Especializada%20em%20gatos%20-%20Consult%C3%B3rio%20exclusivo%20para%20felinos!5e0!3m2!1sen!2sbr!4v1719100156600!5m2!1sen!2sbr"
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade" />
           <span>Rua Jandira, 123 - Indianópolis  04080-002</span>
         </div>
       </div>

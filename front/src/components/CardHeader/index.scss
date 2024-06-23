@@ -1,136 +1,182 @@
-.App-header {
-  padding: 20px;
+.section-header {
   background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  .logo {
-    height: 80px;
-    margin-right: 40px;
-  }
-  
-  .header-left {
+  .App-header {
+    padding: 15px 30px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin: 0px 35px;
-    gap: 30px;  
-
-    div {
+    margin: 0 auto;
+    max-width: 1400px;
+  
+    .logo {
+      height: 80px;
+      margin-right: 40px;
+    }
+    
+    .header-left {
       display: flex;
-      color:  #065F04;
-
-      .custom-pin {
-        margin: 5px 10px 0px 0px;
-        font-size: 20px;
-      }
-
+      align-items: center;
+      margin: 0px 35px;
+  
       div {
         display: flex;
-        flex-direction: column;
-        
-        p {
-          font-size: 15px;
+        color:  #065F04;
+  
+        .custom-pin {
+          margin: 5px 10px 0px 0px;
+          font-size: 20px;
+        }
+  
+        div {
+          display: flex;
+          flex-direction: column;
+          
+          p {
+            font-size: 15px;
+          }
         }
       }
     }
-  }
-
-  nav { 
-    ul {
+  
+    nav {
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+  
+        li {
+          font-weight: 400;
+          font-size: 17px;
+  
+          a, Link {
+             text-decoration: none;
+             color: #065F04;
+          }
+        }
+      }
+    }
+  
+    .icons-header {
       display: flex;
-      list-style: none;
-      gap: 40px;
-
-      li {
-        margin-left: 40px;
-        font-weight: 400;
-        font-size: 19px;
-
-        a, Link {
-           text-decoration: none;
-           color: #065F04;
+      align-items: center;
+      margin-left: 40px;
+    
+      a {
+        color: #065F04;
+        transition: color 0.3s easy;
+    
+        &:hover {
+          color: #145a32;
+        }
+    
+        .custom-userIcon {
+          font-size: 18px;
         }
       }
     }
   }
+}
 
-  .icons-header {
+// sidebar
+.section-header #sideBar-closed {
+  border: 1px solid #BCBCBC;
+  color: #065F04;
+  padding: 13px 12px;
+  height: 100%;
+
+  button {
+    cursor: pointer;
+    color: #065F04;
+    border: none;
+    font-size: 30px;
+  }
+}
+
+.menu-mobile {
+  background-color: #BCBCBC;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 0%;
+  overflow: hidden;
+
+  div {
     display: flex;
-    align-items: center;
-    margin-left: 20px;
-  
-    a {
-      color: #065F04;
-      transition: color 0.3s easy;
-  
-      &:hover {
-        color: #145a32;
-      }
-  
-      .custom-userIcon {
-        font-size: 18px;
+    justify-content: flex-end;
+    .btn-fechar {
+      padding: 20px 16%;
+      font-size: 22px;
+     }
+  }
+
+  nav {
+    ul {
+      li {
+        list-style: none;
+        a {
+          display: flex;
+          flex-direction: column;
+          text-align: right;
+          color: #065F04;
+          text-decoration: none;
+          font-weight: 300;
+          font-size: 20px;
+          padding: 20px 5%;
+
+          &:hover {
+            background-color: #065F04;
+            color: #fff;
+           }
+        }
       }
     }
   }
 }
 
 // Reponsividade
-@media (max-width: 1329px) {
-  .App-header {
-    padding: 15px;
-    gap: 80px;
-
-    .logo {
-      margin-right: 0px;
-    }
-
-    .header-left {
-      gap: 15px;
-      margin: 0px 25px;
-
-      div {
-        .custom-pin { font-size: 18px; }
-
-        div {
-          p { width: 130px;}
-        }
-
+@media(max-width: 1278px) {
+  .section-header {
+    .App-header {
+      justify-content: space-evenly;
+      padding: 15px;
+      .logo {
+        margin-right: 0px;
       }
-    }
 
-    nav {
-      ul {
-        gap: 20px;
+      nav {
+        ul {
+          gap: 10px;
+
           li {
-            margin-left: 10px;
-            font-size: 15px;
-            width: 105px;
+            width: 130px;
+            text-align: center;
           }
+        }
+      }
+
+      .icons-header {
+        margin-left: 10px;
       }
     }
-
-    .icons-header { 
-      margin-left: 70px;
-      .custom-userIcon { font-size: 13px; } 
-    }  
   }
 }
 
-@media(max-width: 1158px) {
-  .App-header {
-    gap: 40px;
+// @media(min-width: 891px) {
+//   .menu-mobile, .btn-menu { display: none; }
+// }
 
-    nav {
-      ul {
-        gap: 10px;
-        li {
-          font-size: 14px;
+@media screen and (max-width: 890px) {
+  .section-header {
+    .App-header {
+      nav {
+        ul {
+          display: none;
         }
       }
-    }
-    .icons-header {
-      margin-left: 20px;
+
+      .icons-header { display: none; }
     }
   }
 }

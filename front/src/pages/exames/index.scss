@@ -55,6 +55,14 @@
         padding: 10px 200px;
       }
 
+      iframe {
+        width: 100%;
+        max-width: 650px;
+        height: 100%;
+        min-height: 400px;
+        margin-top: 15px;
+      }
+
       span {
         color: #065F04;
         font-size: 20px;
@@ -100,13 +108,15 @@
           padding: 10px 80px;
         }
 
+        iframe { min-height: 250px; }
+
         span { font-size: 17px; }
       }
     }
   }
 }
 
-@media (max-width: 925px) { 
+@media (max-width: 700px) { 
   .section-exames {
     .container-exames {
       margin: 20px 50px;
