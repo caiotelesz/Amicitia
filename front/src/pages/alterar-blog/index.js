@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CardFooter from "../../components/CardFooter";
 import CardHeader from "../../components/CardHeaderAdm";
 import "./index.scss";
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import * as blogApi from "../../api/blogApi";
 import axios from 'axios';
 import { API_ADDRESS } from '../../api/apiAddress';

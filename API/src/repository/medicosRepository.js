@@ -74,8 +74,7 @@ export async function alterDoctor(medico, id) {
     UPDATE tb_Medicos
     SET nome_med = ?,
         crm_med = ?,
-        desc_med = ?,
-        img_med = ?
+        desc_med = ?
     WHERE id_med = ?
   `;
 
@@ -83,7 +82,6 @@ export async function alterDoctor(medico, id) {
     medico.nome,
     medico.crm,
     medico.descricao,
-    medico.img,
     id
   ]);
 

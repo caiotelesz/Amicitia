@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { API_ADDRESS } from '../../api/apiAddress';
 
@@ -15,7 +15,7 @@ export default function AlterarMedicos() {
   const [nome, setNome] = useState('');
   const [crm, setCrm] = useState('');
   const [descricao, setDescricao] = useState('');
-  const [foto, setFoto] = useState('');
+  const [img, setImg] = useState('');
   const [image, setImage] = useState(null);
 
   const { doctorId } = useParams();
@@ -30,7 +30,7 @@ export default function AlterarMedicos() {
         setCrm(doctor.crm);
         setDescricao(doctor.descricao);
         setImage(doctor.image);
-        setFoto(`${API_ADDRESS}/${doctor.foto}`);
+        setImg(`${API_ADDRESS}/${doctor.img}`);
       } catch (error) {
         console.error('Erro ao buscar o item:', error);
         alert('Erro ao buscar o item.');
@@ -65,7 +65,7 @@ export default function AlterarMedicos() {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       alert('Imagem alterada com sucesso.');
-      setFoto(URL.createObjectURL(file));
+      setImg(URL.createObjectURL(file));
     } catch (error) {
       console.error('Erro ao alterar a imagem:', error);
       alert('Erro ao alterar a imagem.');
@@ -114,7 +114,7 @@ export default function AlterarMedicos() {
               onChange={alterarImagem}
             />
           
-          <img src={foto} alt="rosto do médico" className='image-preview'/>
+          <img src={img} alt="rosto do médico" className='image-preview-med'/>
         </div>
         <button className="button" onClick={alterarMedico}>Editar médico</button>
       </div>
