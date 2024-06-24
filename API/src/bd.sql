@@ -1,20 +1,6 @@
 create database amicitia;
 use amicitia;
 
--- create table tb_Login (
--- 	id_adm int primary key auto_increment,
---     login_adm varChar(25) not null,
---     senha_adm varChar(20) not null
--- );
-
-
--- insert into tb_Login (login_adm, senha_adm)
--- values ('admin', '1234');
-
--- select * from tb_Login;
-
--- drop table tb_Login; NÃO SEI SE SERÁ PRECISO
-
 create table tb_Medicos (
 	id_med int primary key auto_increment,
     nome_med varChar(20) not null,

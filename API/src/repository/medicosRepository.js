@@ -55,20 +55,6 @@ export async function listDoctorPerId(id) {
   return line[0];
 }
 
-
-// // deletar médico pelo nome
-// export async function deleteDoctorName(nome) {
-//   let command = `
-//     DELETE FROM tb_Medicos WHERE nome_med = ?
-//   `;
-
-//   let resp = await con.query(command, [nome]);
-  
-//   let info = resp[0];
-
-//   return info.affectedRows;
-// }
-
 // deletar médico pelo id
 export async function deleteDoctorId(id) {
   let command = `

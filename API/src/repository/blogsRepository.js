@@ -2,8 +2,13 @@ import con from "./connection.js";
 
 // Add blogs
 export async function addBlog(blog) {
+  if (!blog.titulo || !blog.resumo || !blog.descricao || !blog.fonte) {
+    resp.send(404);
+  }
+
   let command = `
-  INSERT INTO tb_Blog (foto_blog, titulo_blog, resumo_blog, desc_blog, font_blog) values (?, ?, ?, ?, ?)
+  INSERT INTO tb_Blog (foto_blog, titulo_blog, resumo_blog, desc_blog, font_blog) 
+          VALUES (?, ?, ?, ?, ?)
   `;
 
   let resp = await con.query(command, [

@@ -32,18 +32,6 @@ server.get('/medico/:id', async(req, resp) => {
   resp.send(medPerId);
 })
 
-// // Deletar médico pelo nome
-// server.delete('/medico/:nome', async (req, resp) => {
-//   let nome = req.params.nome;
-
-//   let linesAffect = await deleteDoctorName(nome);
-
-//   if (linesAffect > 0)
-//     resp.status(404).send({ message: 'Médico não encontrado. '});
-//   else
-//     resp.status(202).send({ message: 'Médico deletado com sucesso.' });
-// })
-
 // Deletar médico pelo id
 server.delete('/medico/:id', async (req, resp) => {
   let id = req.params.id;

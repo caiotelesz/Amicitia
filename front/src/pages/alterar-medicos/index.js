@@ -15,11 +15,10 @@ export default function AlterarMedicos() {
   const [nome, setNome] = useState('');
   const [crm, setCrm] = useState('');
   const [descricao, setDescricao] = useState('');
+  const [foto, setFoto] = useState('');
   const [image, setImage] = useState(null);
-  const [img, setImg] = useState('');
 
   const { doctorId } = useParams();
-  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchItem() {
@@ -31,7 +30,7 @@ export default function AlterarMedicos() {
         setCrm(doctor.crm);
         setDescricao(doctor.descricao);
         setImage(doctor.image);
-        setImg(`${API_ADDRESS}/${doctor.img}`)
+        setFoto(`${API_ADDRESS}/${doctor.foto}`);
       } catch (error) {
         console.error('Erro ao buscar o item:', error);
         alert('Erro ao buscar o item.');
@@ -66,7 +65,7 @@ export default function AlterarMedicos() {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       alert('Imagem alterada com sucesso.');
-      setImg(URL.createObjectURL(file));
+      setFoto(URL.createObjectURL(file));
     } catch (error) {
       console.error('Erro ao alterar a imagem:', error);
       alert('Erro ao alterar a imagem.');
@@ -115,7 +114,7 @@ export default function AlterarMedicos() {
               onChange={alterarImagem}
             />
           
-          <img src={img} alt="rosto do médico" className='image-preview'/>
+          <img src={foto} alt="rosto do médico" className='image-preview'/>
         </div>
         <button className="button" onClick={alterarMedico}>Editar médico</button>
       </div>

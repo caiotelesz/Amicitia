@@ -1,6 +1,5 @@
 import 'dotenv/config'
 
-// import loginController from "./controller/loginController.js";
 import medicosController from "./controller/medicosController.js";
 import blogsController from "./controller/blogsController.js";
 
@@ -11,7 +10,6 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
-// server.use(loginController); NN UTILIZAVEL
 server.use(medicosController);
 server.use(blogsController);
 

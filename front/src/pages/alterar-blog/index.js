@@ -17,7 +17,6 @@ export default function AlterarBlog() {
   const [image, setImage] = useState(null);
 
   const { blogId } = useParams();
-  const navigate = new useNavigate();
 
   useEffect(() => {
     async function fetchItem() {
