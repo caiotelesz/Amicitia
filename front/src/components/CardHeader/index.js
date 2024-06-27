@@ -6,12 +6,13 @@ import { Link } from "react-router-dom";
 
 export default function CardHeader() {
   function closeOpen() {
-    document
-      .querySelector(".section-header #sideBar-closed")
-      .classList.toggle("closed");
-    document
-      .querySelector(".section-header #sideBar-open")
-      .classList.toggle("closed");
+    document.querySelector(".menu-mobile").classList.toggle("open");
+    document.querySelector(".menu-mobile-list").classList.toggle("hidden");
+  }
+
+  function closeMenu() {
+    document.querySelector(".menu-mobile").classList.remove("open");
+    document.querySelector(".menu-mobile-list").classList.remove("hidden");
   }
 
   return (
@@ -53,35 +54,36 @@ export default function CardHeader() {
         </div>
       </div>
 
-      <div id="header-closed" className="menu-mobile-open">
+      {/* Mobile */}
+      <div id="sideBar-closed" className="menu-mobile-list">
         <button onClick={closeOpen}>
-          <FontAwesomeIcon icon={faList} className="icon" />
+          <FontAwesomeIcon icon={faList} className="icon-open" />
         </button>
+      </div>
 
-        <div id="sideBar-open" className="menu-mobile">
+      <div id="header-closed" className="menu-mobile">
         <div className="btn-close">
-          <FontAwesomeIcon icon={faX} className='btn-fechar' onClick={closeOpen}/>
+          <FontAwesomeIcon icon={faX} className="btn-fechar" onClick={closeOpen} />
         </div>
         <nav>
           <ul>
             <li>
-              <Link to="/#agendar-horario">AGENDAR HORÁRIO</Link>
+              <Link to="/#agendar-horario" onClick={closeMenu}>AGENDAR HORÁRIO</Link>
             </li>
             <li>
-              <Link to="/exames">RESULTADOS DE EXAMES</Link>
+              <Link to="/exames" onClick={closeMenu}>RESULTADOS DE EXAMES</Link>
             </li>
             <li>
-              <Link to="/nossos_profissionais">NOSSOS PROFISSIONAIS</Link>
+              <Link to="/nossos_profissionais" onClick={closeMenu}>NOSSOS PROFISSIONAIS</Link>
             </li>
             <li>
-              <Link to="/contato">CONTATO</Link>
+              <Link to="/contato" onClick={closeMenu}>CONTATO</Link>
             </li>
             <li>
-              <Link to="/trabalhe_conosco">TRABALHE CONOSCO</Link>
+              <Link to="/trabalhe_conosco" onClick={closeMenu}>TRABALHE CONOSCO</Link>
             </li>
           </ul>
         </nav>
-      </div>
       </div>
     </header>
   );
