@@ -16,14 +16,19 @@ export default function Contato() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const submit = () => {
-    alert('Mensagem enviada!');
-    setFormData({
-      fullName: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+  const submit = (event) => {
+    event.preventDefault(); // Prevenir o comportamento padrão de envio
+    if (formData.fullName && formData.email) { // Validar os campos obrigatórios aqui
+      alert('Mensagem enviada!');
+      setFormData({
+        fullName: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } else {
+      alert('Por favor, preencha os campos obrigatórios.');
+    }
   };
 
   return (
@@ -42,6 +47,7 @@ export default function Contato() {
             placeholder="Nome completo *"
             value={formData.fullName}
             onChange={inputChange}
+            required
           />
 
           <input
@@ -50,6 +56,7 @@ export default function Contato() {
             placeholder="E-mail *"
             value={formData.email}
             onChange={inputChange}
+            required
           />
 
           <input
@@ -58,6 +65,7 @@ export default function Contato() {
             placeholder="Assunto"
             value={formData.subject}
             onChange={inputChange}
+            required
           />
 
           <textarea
