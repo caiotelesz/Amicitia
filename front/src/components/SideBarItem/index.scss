@@ -4,7 +4,6 @@
 
 // Aparência da sidebar fechada
 .section-sideBar #sideBar-closed {
-  border: 1px solid #BCBCBC;
   color: #065F04;
   padding: 13px 12px;
   height: 100%;
@@ -54,7 +53,8 @@
     }
 
     div.opt-nav {
-      border: 1px solid #BCBCBC;
+      border-top: 1px solid #BCBCBC;
+      border-bottom: 1px solid #BCBCBC;
       padding: 24px 30px;
       display: flex;
       align-items: center;
