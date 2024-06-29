@@ -1,10 +1,11 @@
-import con from "./connection.js";
+import con from './connection.js';
 
 // Add médico
 export async function addDoctor(medico) {
   let command = `
     INSERT INTO tb_Medicos (nome_med, crm_med, desc_med, img_med)
-           VALUES (?, ?, ?, ?)
+           VALUES ($1, $2, $3, $4)
+           RETURNING id_med
   `;
 
   let resp = await con.query(command, [
@@ -14,9 +15,9 @@ export async function addDoctor(medico) {
     medico.img
   ]);
 
-  let info = resp[0];
+  let info = resp.rows[0];
 
-  medico.id = info.insertId;
+  medico.id = info.id_med;
   return medico;
 }
 
@@ -31,11 +32,8 @@ export async function listDoctor() {
     FROM tb_Medicos
   `;
 
-  let resp = await con.query(command, []);
-  
-  let info = resp[0];
-
-  return info;
+  let resp = await con.query(command);
+  return resp.rows;
 }
 
 // Listar médico pelo id
@@ -44,60 +42,54 @@ export async function listDoctorPerId(id) {
     SELECT id_med       id,
            nome_med     nome,
            crm_med      crm, 
-           desc_med     descricao
+           desc_med     descricao,
+           img_med      img
     FROM tb_Medicos
-    WHERE id_med = ?
-  `
-
-  let resp = await con.query(command, [id]);
-  let line = resp[0];
-
-  return line[0];
-}
-
-// deletar médico pelo id
-export async function deleteDoctorId(id) {
-  let command = `
-    DELETE FROM tb_Medicos WHERE id_med = ?
+    WHERE id_med = $1
   `;
 
   let resp = await con.query(command, [id]);
-  
-  let info = resp[0];
-
-  return info.affectedRows;
+  return resp.rows[0];
 }
 
-// Alterar o medico
+// Deletar médico pelo id
+export async function deleteDoctorId(id) {
+  let command = `
+    DELETE FROM tb_Medicos WHERE id_med = $1
+  `;
+
+  let resp = await con.query(command, [id]);
+  return resp.rowCount;
+}
+
+// Alterar o médico
 export async function alterDoctor(medico, id) {
   let command = `
     UPDATE tb_Medicos
-    SET nome_med = ?,
-        crm_med = ?,
-        desc_med = ?
-    WHERE id_med = ?
+    SET nome_med = $1,
+        crm_med = $2,
+        desc_med = $3
+    WHERE id_med = $4
   `;
 
-  let [rows] = await con.query(command, [
+  let resp = await con.query(command, [
     medico.nome,
     medico.crm,
     medico.descricao,
     id
   ]);
 
-  return rows.affectedRows;
+  return resp.rowCount;
 }
 
-// Altera a imagem do médico
-export async function alterDoctorImage(id, medico) {
+// Alterar a imagem do médico
+export async function alterDoctorImage(id, img) {
   let command = `
     UPDATE tb_Medicos
-    SET img_med = ?
-    WHERE id_med = ?
+    SET img_med = $1
+    WHERE id_med = $2
   `;
 
-  let resp = await con.query(command, [medico, id]);
-  let info = resp[0];
-
-  return info.affectedRows;
+  let resp = await con.query(command, [img, id]);
+  return resp.rowCount;
 }

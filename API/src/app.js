@@ -16,5 +16,5 @@ server.use(blogsController);
 server.use('/storage/medicos', express.static('storage/medicos'));
 server.use('/storage/blogs', express.static('storage/blogs'));
 
-let port = process.env.PORT;
+let port = process.env.PG_PORT;
 server.listen(port, () => console.log("API SUBIU na porta: " + port));

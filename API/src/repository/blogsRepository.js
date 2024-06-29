@@ -1,14 +1,15 @@
-import con from "./connection.js";
+import con from './connection.js';
 
 // Add blogs
 export async function addBlog(blog) {
   if (!blog.titulo || !blog.resumo || !blog.descricao || !blog.fonte) {
-    resp.send(404);
+    throw new Error('Missing required blog fields');
   }
 
   let command = `
   INSERT INTO tb_Blog (foto_blog, titulo_blog, resumo_blog, desc_blog, font_blog) 
-          VALUES (?, ?, ?, ?, ?)
+          VALUES ($1, $2, $3, $4, $5)
+          RETURNING id_blog
   `;
 
   let resp = await con.query(command, [
@@ -19,9 +20,9 @@ export async function addBlog(blog) {
     blog.fonte
   ]);
 
-  let info = resp[0];
+  let info = resp.rows[0];
 
-  blog.id = info.insertId;
+  blog.id = info.id_blog;
   return blog;
 }
 
@@ -37,11 +38,8 @@ export async function listBlog() {
     FROM tb_Blog
   `;
 
-  let resp = await con.query(command, []);
-
-  let info = resp[0];
-
-  return info;
+  let resp = await con.query(command);
+  return resp.rows;
 }
 
 // Listar Blog pelo id
@@ -54,40 +52,35 @@ export async function listBlogPerId(id) {
            desc_blog    descricao,
            font_blog    fonte
     FROM tb_Blog
-    WHERE id_blog = ?
+    WHERE id_blog = $1
   `;
 
   let resp = await con.query(command, [id]);
-  let info = resp[0];
-
-  return info[0];
+  return resp.rows[0];
 }
 
-// deletar blog pelo id
+// Deletar blog pelo id
 export async function deleteBlogId(id) {
   let command = `
-    DELETE FROM tb_Blog WHERE id_Blog = ?
-  `
+    DELETE FROM tb_Blog WHERE id_blog = $1
+  `;
 
   let resp = await con.query(command, [id]);
-
-  let info = resp[0];
-
-  return info.affectedRows;
+  return resp.rowCount;
 }
 
 // Alterar o blog
 export async function alterBlog(blog, id) {
   let command = `
     UPDATE tb_Blog
-    SET titulo_blog = ?,
-           resumo_blog = ?,
-           desc_blog = ?,
-           font_blog = ?
-    WHERE id_Blog = ?
+    SET titulo_blog = $1,
+        resumo_blog = $2,
+        desc_blog = $3,
+        font_blog = $4
+    WHERE id_blog = $5
   `;
 
-  let [rows] = await con.query(command, [
+  let resp = await con.query(command, [
     blog.titulo,
     blog.resumo,
     blog.descricao,
@@ -95,19 +88,17 @@ export async function alterBlog(blog, id) {
     id
   ]);
 
-  return rows.affectedRows;
+  return resp.rowCount;
 }
 
 // Alterar a imagem do blog
 export async function alterBlogImage(id, blog) {
   let command = `
     UPDATE tb_Blog
-    SET foto_blog = ?
-    WHERE id_blog = ?
+    SET foto_blog = $1
+    WHERE id_blog = $2
   `;
 
   let resp = await con.query(command, [blog, id]);
-  let info = resp[0];
-
-  return info.affectedRows;
+  return resp.rowCount;
 }

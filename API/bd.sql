@@ -9,11 +9,6 @@ create table tb_Medicos (
     img_med varChar(200)
 );
 
-insert into tb_Medicos (nome_med, crm_med, desc_med, img_med)
-values ('Marce2lo', '99432', 'desc4rição do med', 'imagem direcionada');
-
-select * from tb_Medicos;
-
 create table tb_Blog (
 	id_blog int primary key auto_increment,
     foto_blog varChar(200),
@@ -22,8 +17,3 @@ create table tb_Blog (
     desc_blog text not null,
     font_blog varChar(35) not null
 );
-
-insert into tb_Blog (foto_blog, titulo_blog, resumo_blog, desc_blog, font_blog)
-values ('imagem direcionada', 'titulo do bsslog', 'resumoss do blog', 'descrição dao blog', 'font do blog');
-
-select * from tb_Blog;

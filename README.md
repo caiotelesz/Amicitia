@@ -14,7 +14,7 @@ O objetivo principal deste projeto era aplicar e aprimorar os conhecimentos em d
 ### API
 - Node.js
 - Postman
-- MySQL
+- PostgreSQL
 
 ## Funcionalidades Previstas
 - **Cadastro de Médicos:**
