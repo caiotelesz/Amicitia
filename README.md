@@ -49,6 +49,10 @@ Siga os passos abaixo para executar o projeto localmente:
 
 O aplicativo estará disponível em http://localhost:3000 
 <br />
+# Link do Projeto
+**Figma**: https://www.figma.com/design/CiqP1DfsKoFc3E1Ef2G9ib/Amicitia?node-id=0-1&t=PEFVpLe5QWrSpNZi-1
+
+<br />
 
 # Contribuição do projeto
 Contribuições são bem-vindas! Se desejar contribuir para este projeto, siga estas etapas:
