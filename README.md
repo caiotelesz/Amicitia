@@ -13,7 +13,7 @@ O objetivo principal deste projeto era aplicar e aprimorar os conhecimentos em d
 
 ### API
 - Node.js
-- Postman
+- Thunder Client
 - PostgreSQL
 
 ## Funcionalidades Previstas
