@@ -64,5 +64,4 @@ Contribuições são bem-vindas! Se desejar contribuir para este projeto, siga e
 5. Abra um Pull Request.
 
 
-# Desenvolvido Por:
-Caio Teles
+# Desenvolvido Por: Caio Teles
